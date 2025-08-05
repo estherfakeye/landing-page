@@ -1,82 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="We help you save time with smart tools and personalized service.">
-    <title>Landing Page | My Service</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="We help you save time with smart tools and personalized service.">
+  <title>DevPortfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Hero section-->
-    <header class="hero">
-        <div class="navbar">
-                <div class="hero-logo">DevPortfolio</div>
-                   <nav class="nav-links">
-                       <a href="#">Home</a>
-                       <a href="#">Projects</a>
-                       <a href="#" class="Contact">Contact</a>
-                    </nav>
-        </div>
-        <div class="hero-content">
+  <!--Hero section-->
+  <header class="hero">
+    <div class="navbar">
+      <div class="hero-logo">DevPortfolio</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
 
-            <div class="hero-text">
-                <h1>I’m a Web Developer</h1>
-                <P>Crafting clean and modern websites that help you grow online. </P>
-                <button class="sign-upBtn">View Portfolio</button>
-            </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>I’m a Web Developer</h1>
+        <p>Crafting clean and modern websites that help you grow online.</p>
+        <button class="sign-upBtn">View Portfolio</button>
+      </div>
+      <div class="hero-image">
+        <img src="/image/image.png" alt="web-developer" />
+      </div>
+    </div>
+  </header>
 
-            <div class="hero-image">
-                <img src="/image/image.png" alt="web-developer"> </div>
-        </div>
-    </header>
-    <!--Info Section-->
-    <section class="info">
-        <h2>My Services</h2>
-        <div class="info-cards">
-    
-        <div class="card" data-aos="fade-up">
-            <div class="icon"><i class="fas fa-desktop"></i></div>
-            <p>Responsive Web Design</p>
-        </div>
+  <!--Info Section-->
+  <section class="info">
+    <h2>My Services</h2>
+    <div class="info-cards">
+      <div class="card" data-aos="fade-up">
+        <div class="icon"><i class="fas fa-desktop"></i></div>
+        <p>Responsive Web Design</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon"><i class="fas fa-code"></i></div>
+        <p>Front-end Development</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon"><i class="fas fa-tools"></i></div>
+        <p>Performance Optimization</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon"><i class="fas fa-layer-group"></i></div>
+        <p>Web Solutions</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="fas fa-code"></i></div>
-            <p>Front-end Development</p>
-        </div>
+  <!-- Testimonial -->
+  <section class="Testimonial" data-aos="fade-up" data-aos-delay="100">
+    <p>
+      <em>"This is an inspiring quote, or a testimonial from a customer."</em><br />
+      <strong>- Happy Client</strong>
+    </p>
+  </section>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="fas fa-tools"></i></div>
-            <p>Performance Optimization</p>
-        </div>
+  <!-- Call To Action -->
+  <section class="CTA" data-aos="zoom-in" data-aos-delay="200">
+    <h3>Let's build something great!</h3>
+    <p>Have a project in mind? Let's connect and create magic together...</p>
+    <button id="CTA-btn">Contact me</button>
+  </section>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="fas fa-layer-group"></i></div>
-            <p>Web Solutions</p>
-        </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 DevPortfolio | Built with love & HTML/CSS</p>
+  </footer>
 
-  </div>
-</section>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-    <section class="Testimonial" data-aos="fade-up" data-aos-delay="100">
-        <p><em>"This is an inspiring quote, or a testimonial from a customer.Maybe it's just filling up space,  or maybe people will actually read it"</em><br>
-        <strong>- Happy Client</strong></p>
-    </section>
-    <section class="CTA" data-aos="zoom-in" data-aos-delay="200">
-        <div>
-            <h3>Let's build something great!</h3>
-            <p>Have a project in mind? Let's connect and create Magic together...</p>
-        </div>
-        
-        <button id="CTA-btn">Contact me</button>
-    </section>
-    <footer >
-        <p>© 2025 DevPortfolio | Built with love & HTML/CSS</p>
-    </footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.navLinks');
+
+    toggle.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+    });
+  });
 </script>
+
 </body>
 </html>
