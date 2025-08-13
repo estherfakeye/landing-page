@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="We help you save time with smart tools and personalized service.">
   <title>DevPortfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vercel/geist@latest/dist/geist.min.css">
 </head>
 <body>
   <!--Hero section-->
   <header class="hero">
     <div class="navbar">
       <div class="hero-logo">DevPortfolio</div>
-      <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="menu-toggle">
         <i class="fas fa-bars"></i>
       </div>
       <nav class="nav-links" id="navLinks">
         <a href="#">Home</a>
         <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#" class="Contact">Contact</a>
       </nav>
     </div>
 
@@ -91,11 +92,16 @@
   <script>
   document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.navLinks');
+    const navLinks = document.querySelector('.nav-links');
 
     toggle.addEventListener('click', function () {
       navLinks.classList.toggle('active');
     });
+  document.addEventListener('click', function (e) {
+      if (!toggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    }); 
   });
 </script>
 
